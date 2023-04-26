@@ -45,6 +45,7 @@
         <button
           :class="['absolute top-6 right-4 rounded-full w-7 h-7 p-1 cursor-pointer hover:bg-white-200',
                    'focus:outline-none focus:ring-2 focus:ring-primary-100']"
+          class="m-button"
           :aria-label="closeButtonAriaLabel"
           @click="closeModal"
           @keyup.enter="closeModal"
@@ -114,7 +115,7 @@ export default {
 
 .modal {
   @media (max-width: 768px){
-    max-width: 85%;
+    max-width: 70%;
   }
   .m-dialog {
     @media (max-width: 768px){
