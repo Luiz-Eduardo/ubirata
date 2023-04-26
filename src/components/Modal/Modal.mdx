@@ -1,0 +1,53 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import {
+  Story,
+  ArgsTable,
+  PRIMARY_STORY,
+} from "@storybook/addon-docs";
+import Modal from "./Modal.vue";
+
+# Modal
+
+Um modal é um componente que é aberto mediante ação para exibir informações.
+
+<Canvas>
+  <Story id="components-modal--primary" />
+</Canvas>
+
+## Como usar
+
+Este componente Modal foi projetado para ser usado com slots para preencher seu cabeçalho e rodapé e o slot padrão para seu body.
+
+Aqui está um exemplo de um botão abrindo um modal.
+
+A visibilidade é controlada a partir do componente pai usando a prop `visible`. Nota: este não é um `v-model`. Você precisará atualizar isso quando o evento `close` for emitido.
+
+A prop `header` (obrigatório) fornecerá o título do modal; nenhum título será renderizado se uma string vazia for passada para o prop.
+
+O `closeButtonAriaLabel` também é necessário e fornecerá o botão fechar (X) com um aria-label.
+
+Para adicionar um rodapé, use o slot `#footer`. Se nenhum slot de rodapé for fornecido, nada será renderizado em seu lugar.
+
+```html
+<button @click="isModalVisible = true">Open Modal</button>
+
+<Modal
+  :visible="isModalVisible"
+  header="Selecione eventos"
+  close-button-aria-label="Fechar modal de eventos de rastreamento"
+  @close="isModalVisible = false"
+>
+  Gostaria de exportar um CSV adicional de eventos de rastreamento associados?
+
+  <template v-slot:footer>
+    <div class="flex self-end">
+      <button>Voltar</button>
+      <button class="ml-2">Exportar</button>
+    </div>
+  </template>
+</Modal>
+```
+
+## Props
+
+<ArgsTable story={PRIMARY_STORY} />

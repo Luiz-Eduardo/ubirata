@@ -16,8 +16,6 @@
       "types": ["vitest/importMeta"],
       "paths": {
         "@/*": ["*"],
-        "@components/*": ["components/*"],
-        "@pages/*": ["@Pages/*"],
       }
     },
     "include": [
@@ -25,9 +23,10 @@
       "src/**/*.d.ts",
       "src/**/*.tsx",
       "src/**/*.vue",
+      "src/**/*.json",
       "vite.config.*",
       "auto-imports.d.ts"
     ],
-    "exclude": ["src/**/__tests__/*"]
+    "exclude": ["src/**/__tests__/*", "**/*.stories.ts"]
   }
-  
+

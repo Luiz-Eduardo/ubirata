@@ -1,59 +1,76 @@
-# Project Overview
-This is a project that uses Vue 3, Typescript, Vite, Vitest, Pinia, Tailwind, and Storybook. It is a modern web development stack that is fast and efficient for building scalable web applications.
+# Ubiratã
+## Visão Geral do Projeto
+Este é um projeto que usa Vue 3, Typescript, Vite, Vitest, Tailwind e Storybook. É uma stack de desenvolvimento web moderna que é rápida e eficiente para construir aplicativos web escaláveis.
 
-# Getting Started
-To get started with the project, follow the steps below:
+## Preview
+É possível visualizar uma página inicial explicando sobre o projeto e uma aba com o mapa para visualização que possui gráficos ao clicar nos bairros.
+### Página Inicial
+<img src="src/assets/images/home.png" alt="Página Inicial">
 
-1. Clone the repository to your local machine
-2. Run `npm install` to install the project dependencies
-3. Run `npm run dev` to start the development server
-4. Open your browser and go to `http://localhost:5173` to see the application
+### Mapa
+<img src="src/assets/images/map.png" alt="Mapa">
 
+### Gráficos
+<img src="src/assets/images/grafico.png" alt="Gráfico de Barras">
 
-# Folder Structure
-The folder structure for the project is as follows:
+## Começando
+Para iniciar o projeto, siga os passos abaixo:
+
+1. Clone o repositório em sua máquina local
+2. Execute `npm install` para instalar as dependências do projeto
+3. Execute `npm run dev` para iniciar o servidor de desenvolvimento
+4. Abra seu navegador e acesse `http://localhost:3000` para ver a aplicação funcionando
+
+## Estrutura de pastas
+A estrutura de pastas do projeto é a seguinte:
 
 ```
 .
-├── dist                   # Compiled files
-├── public                 # Public assets
-├── src                    # Source code
-│   ├── assets             # Static assets
-│   ├── components         # Reusable components
-│   ├── pages              # Page components
-│   ├── services           # API services
-│   ├── store              # Global state management using Pinia
-│   ├── styles             # Global styles using Tailwind
-│   ├── utils              # Utility functions
-│   ├── App.vue            # Root component
+├── dist                   # Arquivos compilados
+├── public                 # Assets públicos
+├── src                    # Código fonte
+│   ├── api                # API (nesse caso mock da API)
+│   ├── assets             # Assets estáticos
+│   ├── components         # Componentes reutilizáveis
+|   |   ├── tests          # Testes unitários dos componentes usando Vitest
+│   ├── pages              # Componentes de página
+|   |   ├── tests          # Testes unitários/de integração das páginas usando Vitest
+│   ├── styles             # Estilos globais usando Tailwind
+│   ├── App.vue            # Componente raiz
 │   └── main.ts            # Entry point
-├── tests                  # Unit tests using Vitest
-├── .storybook             # Storybook configuration
-├── vite.config.ts         # Vite configuration
-├── tsconfig.json          # TypeScript configuration
-├── package.json           # Dependencies and scripts
-└── README.md              # Project documentation
+├── .storybook             # Configuração do Storybook
+├── tailwind.config.js     # Configuração do Tailwind
+├── tsconfig.json          # Configuração do TypeScript
+├── package.json           # Dependências e scripts
+├── vite.config.ts         # Configuração do Vite
+└── README.md              # Documentação do projeto
 ```
 
-# Features
-The project includes the following features:
+## Tecnologias e Funcionalidades
+### Tecnologias
+O projeto inclui as seguintes tecnologias:
 
-- Vue 3 for building reactive user interfaces
-- TypeScript for type safety and scalability
-- Vite for fast and efficient development and building
-- Vitest for unit testing
-- Pinia for global state management
-- Tailwind for rapid and consistent styling
-- Storybook for component-driven development and documentation
+- Vue 3 para construir interfaces de usuário reativas
+- TypeScript para segurança de tipo e escalabilidade
+- Vite para desenvolvimento e construção rápidos e eficientes
+- Vitest para testes unitários
+- Tailwind para estilos rápidos e consistentes
+- Storybook para desenvolvimento e documentação orientados a componentes
 
-# Scripts
-The project includes the following scripts:
+### Funcionalidades
+O projeto possui as seguintes funcionalidades:
+- Exibe os bairros em um mapa
+- Para cada bairro exibido mostra a evolução populacional ao longo do tempo em um gráfico de
+barras.
 
-- `npm run dev`: Starts the development server
-- `npm run build`: Builds the production-ready application
-- `npm run test:unit`: Runs the unit tests using Vitest
-- `npm run storybook`: Starts the Storybook development server
-- `npm run build-storybook`: Builds the Storybook documentation
+## Scripts
+O projeto inclui os seguintes scripts:
 
-# Conclusion
-This project is a modern web development stack that is fast and efficient for building scalable web applications. It includes all the necessary tools and features for developing high-quality applications with ease. If you have any questions or suggestions, please feel free to open an issue or pull request on GitHub.
+- `npm run dev`: Inicia o servidor de desenvolvimento
+- `npm run build`: Builda o aplicativo pronto para produção
+- `npm run test:unit`: Executa os testes unitários usando o Vitest
+- `npm run storybook`: Inicia o servidor de desenvolvimento do Storybook
+- `npm run build-storybook`: Builda a documentação do Storybook
+
+## Conclusão
+Este projeto é uma stack de desenvolvimento web moderna que é rápida e eficiente para construir aplicativos web escaláveis. Inclui todas as ferramentas e recursos necessários para desenvolver aplicativos de alta qualidade com facilidade.

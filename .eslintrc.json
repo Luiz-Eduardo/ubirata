@@ -10,7 +10,6 @@
     "eslint:recommended",
     "@vue/typescript/recommended",
     "prettier",
-    "prettier/vue",
     "plugin:storybook/recommended"
   ],
   "parserOptions": {

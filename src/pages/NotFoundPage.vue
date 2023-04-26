@@ -1,0 +1,9 @@
+<template>
+  <h1>404 Error</h1>
+  <div class="mt-8">
+    <p class="mb-4">
+      I'm sorry, the page you are looking for cannot be found. Please check the URL and try again, or navigate to a different page using the menu above. If you
+      continue to experience issues, please contact our support team for assistance.
+    </p>
+  </div>
+</template>

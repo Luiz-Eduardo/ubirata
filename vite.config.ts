@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitest/config'
-import { fileURLToPath } from "url"
 import path from 'path'
 import vue from '@vitejs/plugin-vue'
 
@@ -14,7 +13,7 @@ export default defineConfig({
         /\.[tj]sx?$/,
         /\.vue$/,
       ],
-      imports: ["vue", "vue-router", "pinia"],
+      imports: ["vue", "vue-router"],
       dts: true,
       vueTemplate: true,
       eslintrc: { enabled: true }
@@ -22,15 +21,22 @@ export default defineConfig({
   ],
   test: {
     globals: true,
-    setupFiles: "src/setupTests.ts",
-    includeSource: ["src/**/*.{js,ts,vue}"]
+    includeSource: ["src/**/*.{js,ts,vue}"],
+    css: {
+      modules: {
+        classNameStrategy: 'non-scoped',
+      },
+    },
   },
   base: "./",
   resolve: {
     alias: {
-      "@": fileURLToPath(new URL('./src', import.meta.url)),
-      "@components": path.resolve(__dirname, "src/components"),
-      "@pages": path.resolve(__dirname, "src/@Pages"),
-    }
+      "@": path.resolve(__dirname, './src')
+    },
+    dedupe: ['vue'],
+    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
+  },
+  server: {
+    port: 3000,
   }
 })

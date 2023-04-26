@@ -1,27 +1,16 @@
-<template>
-  <div>
-    This is Landing App Component
-    <ul>
-      <RouterLink to="/">
-        <li>Home</li>
-      </RouterLink>
-      <RouterLink to="/demo">
-        <li>Demo</li>
-      </RouterLink>
-      <RouterLink to="/login">
-        <li>Auth</li>
-      </RouterLink>
-    </ul>
-  </div>
-  <RouterView />
-</template>
-
-<script lang="ts">
-  export default {
-
-  }
+<script lang="ts" setup>
+import { RouterView } from 'vue-router';
+import NavMain from '@/components/NavMain/NavMain.vue';
 </script>
 
-<style scoped>
+<template>
+  <div class="flex flex-nowrap">
+    <NavMain class="basis-80 grow-0 w-10" />
 
-</style>
+    <div>
+    <main class="grow m-8">
+      <RouterView />
+    </main>
+  </div>
+  </div>
+</template>

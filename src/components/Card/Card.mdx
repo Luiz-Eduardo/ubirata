@@ -1,0 +1,38 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import {
+  Story,
+  ArgsTable,
+  PRIMARY_STORY,
+} from "@storybook/addon-docs";
+import Card from "./Card.vue";
+
+# Card
+
+Um Card é um componente para exibir informações.
+
+<Canvas>
+  <Story id="components-card--primary" />
+</Canvas>
+
+## Como usar
+
+Este componente Card foi projetado para ser exibir informações da população de um determinado bairro.
+
+Aqui está um exemplo de um Card.
+
+A prop `population` (obrigatório) é uma lista de objectos que possuem o ano e o tamanho da população naquele determinado ano .
+
+```html
+<Card
+  :population="[
+    { ano: 2000, populacao: 1000 },
+    { ano: 2010, populacao: 2000 },
+    { ano: 2020, populacao: 3000 },
+    { ano: 2030, populacao: 4000 },
+  ]"
+/>
+```
+
+## Props
+
+<ArgsTable story={PRIMARY_STORY} />

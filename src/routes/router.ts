@@ -1,32 +1,29 @@
 import * as vR from 'vue-router';
-import DashboardVue from '@pages/Dashboard.vue';
-import PageNotFound from '@pages/NotFoundPage.vue';
+import HomePage from '@/pages/HomePage.vue';
+import MapPage from '@/pages/MapPage.vue';
+import NotFoundPage from '@/pages/NotFoundPage.vue';
 
 const routes: Array<vR.RouteRecordRaw> = [
-    {
-        path: '/',
-        component:  DashboardVue,
-        name: 'home'
-    },
-    {
-        path: '/demo',
-        component:  () => import("@pages/DemoPage.vue"), //Lazy Loading to defer loading only when required
-        name: 'home.demo' //Use defined. Keep dot notation to have elegant design
-    },
-    {
-        path: '/login',
-        component:  () => import("@pages/AuthPage.vue"),
-        name: 'home.auth'
-    },
-    {
-        path: '/notfound',
-        component: PageNotFound,
-        name: 'home.missing'
-    }
+  {
+    path: '/',
+    component: HomePage,
+    name: 'Home'
+  },
+  {
+    path: '/map/neighborhoods',
+    component: MapPage,
+    name: 'Map'
+  },
+  {
+    path: '/:catchAll(.*)',
+    component: NotFoundPage,
+    name: 'NotFound'
+  }
 ]
 
 const router = vR.createRouter({
     history: vR.createWebHistory(),
     routes,
 });
+
 export default router;

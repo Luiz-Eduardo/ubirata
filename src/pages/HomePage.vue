@@ -1,0 +1,24 @@
+<template>
+  <h1>Home</h1>
+  <div class="mt-8">
+    <p class="mb-4">
+      Bem-vindo ao nosso projeto de teste de frontend! Nosso objetivo é fornecer uma visualização clara e interativa da evolução populacional dos bairros em
+      um mapa da cidade. Com nosso aplicativo, você poderá explorar os bairros da cidade e ver como a população mudou ao longo do tempo em um gráfico intuitivo
+      de linhas ou barras.
+    </p>
+    <p class="mb-4">
+      Nosso aplicativo é desenvolvido utilizando as mais recentes tecnologias de frontend, garantindo uma experiência de usuário suave e responsiva. Nosso
+      código é cuidadosamente documentado e você pode encontrar mais informações sobre as tecnologias utilizadas e como configurar o ambiente de desenvolvimento
+      em nosso arquivo README.
+    </p>
+    <p class="mb-4">
+      Nosso objetivo é fornecer uma solução simples e eficiente para visualizar a evolução populacional da cidade, e esperamos que você encontre nosso aplicativo
+      útil e fácil de usar. Explore os bairros da cidade, compare a evolução populacional e experimente diferentes visualizações gráficas para descobrir tendências
+      e padrões interessantes.
+    </p>
+    <p class="mb-4">
+      Obrigado por experimentar nosso projeto de teste de frontend, e esperamos que você goste de usá-lo tanto quanto nós gostamos de desenvolvê-lo!
+    </p>
+  </div>
+</template>
+

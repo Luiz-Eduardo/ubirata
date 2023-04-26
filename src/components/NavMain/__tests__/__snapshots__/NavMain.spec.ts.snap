@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NavMain > renders correctly 1`] = `
+<div>
+  <nav
+    class="bg-white-100 border-r-2 border-white-300 h-screen min-w-fit max-w-max"
+  >
+    <ul>
+      <li
+        class="list-none"
+      >
+        Home
+      </li>
+      <li
+        class="list-none"
+      >
+        Home
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
