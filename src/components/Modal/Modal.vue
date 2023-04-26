@@ -2,6 +2,7 @@
   <transition name="fade">
     <div
       v-show="visible"
+      class="modal"
       :class="['fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-30']"
       :aria-hidden="!visible"
       @mousedown="closeModal"
@@ -13,6 +14,7 @@
         aria-labelledby="header"
         aria-describedby="modalDescription"
         :style="{'width': width}"
+        class="m-dialog"
         :class="[
           'relative bg-white flex flex-col overflow-y-auto shadow rounded-lg max-h-5/6', noPadding ? 'p-0' : 'p-5'
         ]"
@@ -99,7 +101,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;
@@ -108,5 +110,17 @@ export default {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.modal {
+  @media (max-width: 768px){
+    max-width: 85%;
+  }
+  .m-dialog {
+    @media (max-width: 768px){
+        width: 100%;
+        height: 100%;
+    }
+  }
 }
 </style>
