@@ -8,7 +8,7 @@ Este é um projeto que usa Vue 3, Typescript, Vite, Vitest, Tailwind e Storybook
 <img src="src/assets/images/home.png" alt="Página Inicial">
 
 ### Mapa
-<img src="src/assets/images/map.png" alt="Mapa">
+<img src="src/assets/images/mapa.png" alt="Mapa">
 
 ### Gráficos
 <img src="src/assets/images/grafico.png" alt="Gráfico de Barras">
